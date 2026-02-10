@@ -27,7 +27,11 @@ def analyze_traffic(data):
 
         # 3. Test Taille (Large Packet)
         if is_large_packet(size):
+            size_tag = "LARGE"
             reasons.append("LARGE_PACKET")
+        else:
+            size_tag = "NORMAL"
+
 
         # Si on a trouvé des raisons suspectes (la liste n'est pas vide)
         if reasons:
